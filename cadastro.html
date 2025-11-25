@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <title>Cadastro e Agendamento - PetFlu</title>
 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <!-- Bootstrap CSS -->
   <link
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
@@ -15,11 +17,16 @@
 </head>
 <body>
 
+  <a href="#conteudo-principal" class="visually-hidden-focusable">
+    Pular para o conteúdo principal
+  </a>
+
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-flu-grena">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-flu-grena" aria-label="Menu principal">
     <div class="container">
       <a class="navbar-brand fw-bold" href="index.html">PetFlu</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal"
+              aria-controls="menuPrincipal" aria-expanded="false" aria-label="Alternar navegação">
         <span class="navbar-toggler-icon"></span>
       </button>
 
@@ -28,20 +35,20 @@
           <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
           <li class="nav-item"><a class="nav-link" href="produtos.html">Produtos</a></li>
           <li class="nav-item"><a class="nav-link" href="servicos.html">Serviços</a></li>
-          <li class="nav-item"><a class="nav-link active" href="cadastro.html">Cadastro e Agendamento</a></li>
+          <li class="nav-item"><a class="nav-link active" href="cadastro.html" aria-current="page">Cadastro e Agendamento</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <main class="container my-4">
+  <main class="container my-4" id="conteudo-principal">
     <h1 class="mb-3 text-flu-grena">Cadastro do Cliente e do Pet</h1>
     <p class="mb-4">
       Preencha os dados abaixo para realizar o cadastro e agendar banho e/ou tosa
       para o seu pet. Campos marcados com * são obrigatórios.
     </p>
 
-    <form id="formAgendamento" class="row g-3 form-flu">
+    <form id="formAgendamento" class="row g-3 form-flu" aria-label="Formulário de cadastro e agendamento">
 
       <!-- DADOS DO CLIENTE -->
       <h2 class="h4 mt-3 text-flu-green">Dados do Cliente</h2>
@@ -125,15 +132,15 @@
       <div class="col-md-6">
         <p class="form-label mb-1">Serviço desejado *</p>
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="servico" id="servicoBanho" value="banho" required>
+          <input class="form-check-input" type="radio" name="servico" id="servicoBanho" value="Banho" required>
           <label class="form-check-label" for="servicoBanho">Banho</label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="servico" id="servicoTosa" value="tosa">
+          <input class="form-check-input" type="radio" name="servico" id="servicoTosa" value="Tosa">
           <label class="form-check-label" for="servicoTosa">Tosa</label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="servico" id="servicoBanhoTosa" value="banho_e_tosa">
+          <input class="form-check-input" type="radio" name="servico" id="servicoBanhoTosa" value="Banho e Tosa">
           <label class="form-check-label" for="servicoBanhoTosa">Banho e Tosa</label>
         </div>
       </div>
@@ -141,11 +148,11 @@
       <div class="col-md-6">
         <p class="form-label mb-1">Forma de atendimento *</p>
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="atendimento" id="atendimentoTelebusca" value="tele-busca" required>
+          <input class="form-check-input" type="radio" name="atendimento" id="atendimentoTelebusca" value="Tele-busca" required>
           <label class="form-check-label" for="atendimentoTelebusca">Tele-busca (buscamos na sua casa)</label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="atendimento" id="atendimentoLocal" value="local">
+          <input class="form-check-input" type="radio" name="atendimento" id="atendimentoLocal" value="Entrega no local">
           <label class="form-check-label" for="atendimentoLocal">Entrega no local (você traz o pet)</label>
         </div>
       </div>
@@ -164,7 +171,7 @@
         <div class="form-check">
           <input type="checkbox" class="form-check-input" id="receberPromo" name="receberPromo">
           <label class="form-check-label" for="receberPromo">
-            Quero receber promoções da PetFlu por e-mail.
+            Quero receber promoções do PetFlu por e-mail.
           </label>
         </div>
       </div>
