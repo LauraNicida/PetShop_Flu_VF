@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Produtos - PetFlu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
     rel="stylesheet"
@@ -11,18 +12,23 @@
 </head>
 <body>
 
+  <a href="#conteudo-principal" class="visually-hidden-focusable">
+    Pular para o conteúdo principal
+  </a>
+
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-flu-grena">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-flu-grena" aria-label="Menu principal">
     <div class="container">
       <a class="navbar-brand fw-bold" href="index.html">PetFlu</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal"
+              aria-controls="menuPrincipal" aria-expanded="false" aria-label="Alternar navegação">
         <span class="navbar-toggler-icon"></span>
       </button>
 
       <div class="collapse navbar-collapse" id="menuPrincipal">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
-          <li class="nav-item"><a class="nav-link active" href="produtos.html">Produtos</a></li>
+          <li class="nav-item"><a class="nav-link active" href="produtos.html" aria-current="page">Produtos</a></li>
           <li class="nav-item"><a class="nav-link" href="servicos.html">Serviços</a></li>
           <li class="nav-item"><a class="nav-link" href="cadastro.html">Cadastro e Agendamento</a></li>
         </ul>
@@ -30,92 +36,98 @@
     </div>
   </nav>
 
-  <main class="container my-4">
+  <main class="container my-4" id="conteudo-principal">
     <h1 class="mb-4 text-flu-grena">Produtos</h1>
 
     <!-- Categoria: Acessórios -->
-    <h2 class="h4 mt-3 text-flu-green">Acessórios</h2>
-    <div class="row">
-      <div class="col-md-3 mb-3">
-        <div class="card h-100 border-flu">
-          <img src="assets/img/acessorios/bandana2.png" class="card-img-top"
-               alt="Bandana colorida para pets">
-          <div class="card-body">
-            <h5 class="card-title text-flu-grena">Bandana Pet</h5>
-            <p class="card-text">Bandana macia e colorida para deixar o visual do seu pet estiloso.</p>
-            <p class="fw-bold text-flu-green">R$ 19,90</p>
+    <section aria-labelledby="titulo-acessorios">
+      <h2 id="titulo-acessorios" class="h4 mt-3 text-flu-green">Acessórios</h2>
+      <div class="row">
+        <div class="col-md-3 mb-3">
+          <div class="card h-100 border-flu">
+            <img src="assets/img/acessorios/bandana2.png" class="card-img-top"
+                 alt="Bandana colorida para cães ou gatos">
+            <div class="card-body">
+              <h3 class="h5 card-title text-flu-grena">Bandana Pet</h3>
+              <p class="card-text">Bandana macia e colorida para deixar o visual do seu pet estiloso.</p>
+              <p class="fw-bold text-flu-green">R$ 19,90</p>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="col-md-3 mb-3">
-        <div class="card h-100 border-flu">
-          <img src="assets/img/acessorios/coleira.png" class="card-img-top"
-               alt="Coleira para cães ajustável">
-          <div class="card-body">
-            <h5 class="card-title text-flu-grena">Coleira Ajustável</h5>
-            <p class="card-text">Coleira confortável e resistente, com regulagem de tamanho.</p>
-            <p class="fw-bold text-flu-green">R$ 29,90</p>
+        <div class="col-md-3 mb-3">
+          <div class="card h-100 border-flu">
+            <img src="assets/img/acessorios/coleira.png" class="card-img-top"
+                 alt="Coleira ajustável para cães">
+            <div class="card-body">
+              <h3 class="h5 card-title text-flu-grena">Coleira Ajustável</h3>
+              <p class="card-text">Coleira confortável e resistente, com regulagem de tamanho.</p>
+              <p class="fw-bold text-flu-green">R$ 29,90</p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
     <!-- Categoria: Comida -->
-    <h2 class="h4 mt-4 text-flu-green">Comida</h2>
-    <div class="row">
-      <div class="col-md-3 mb-3">
-        <div class="card h-100 border-flu">
-          <img src="assets/img/comida/racao.png" class="card-img-top"
-               alt="Ração seca para cães adultos">
-          <div class="card-body">
-            <h5 class="card-title text-flu-grena">Ração Premium Cães</h5>
-            <p class="card-text">Ração seca para cães adultos, com vitaminas e minerais essenciais.</p>
-            <p class="fw-bold text-flu-green">R$ 89,90</p>
+    <section aria-labelledby="titulo-comida">
+      <h2 id="titulo-comida" class="h4 mt-4 text-flu-green">Comida</h2>
+      <div class="row">
+        <div class="col-md-3 mb-3">
+          <div class="card h-100 border-flu">
+            <img src="assets/img/comida/racao.png" class="card-img-top"
+                 alt="Saco de ração seca para cães adultos">
+            <div class="card-body">
+              <h3 class="h5 card-title text-flu-grena">Ração Premium Cães</h3>
+              <p class="card-text">Ração seca para cães adultos, com vitaminas e minerais essenciais.</p>
+              <p class="fw-bold text-flu-green">R$ 89,90</p>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="col-md-3 mb-3">
-        <div class="card h-100 border-flu">
-          <img src="assets/img/comida/racao_gato.png" class="card-img-top"
-               alt="Ração seca para gatos">
-          <div class="card-body">
-            <h5 class="card-title text-flu-grena">Ração Premium Gatos</h5>
-            <p class="card-text">Ração completa para gatos, com taurina e nutrientes balanceados.</p>
-            <p class="fw-bold text-flu-green">R$ 79,90</p>
+        <div class="col-md-3 mb-3">
+          <div class="card h-100 border-flu">
+            <img src="assets/img/comida/racao_gato.png" class="card-img-top"
+                 alt="Saco de ração seca para gatos">
+            <div class="card-body">
+              <h3 class="h5 card-title text-flu-grena">Ração Premium Gatos</h3>
+              <p class="card-text">Ração completa para gatos, com taurina e nutrientes balanceados.</p>
+              <p class="fw-bold text-flu-green">R$ 79,90</p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
     <!-- Categoria: Higiene -->
-    <h2 class="h4 mt-4 text-flu-green">Higiene</h2>
-    <div class="row">
-      <div class="col-md-3 mb-3">
-        <div class="card h-100 border-flu">
-          <img src="assets/img/higiene/shampoo.png" class="card-img-top"
-               alt="Shampoo para cães e gatos">
-          <div class="card-body">
-            <h5 class="card-title text-flu-grena">Shampoo Neutro</h5>
-            <p class="card-text">Shampoo suave para cães e gatos, ideal para peles sensíveis.</p>
-            <p class="fw-bold text-flu-green">R$ 24,90</p>
+    <section aria-labelledby="titulo-higiene">
+      <h2 id="titulo-higiene" class="h4 mt-4 text-flu-green">Higiene</h2>
+      <div class="row">
+        <div class="col-md-3 mb-3">
+          <div class="card h-100 border-flu">
+            <img src="assets/img/higiene/shampoo.png" class="card-img-top"
+                 alt="Frasco de shampoo neutro para pets">
+            <div class="card-body">
+              <h3 class="h5 card-title text-flu-grena">Shampoo Neutro</h3>
+              <p class="card-text">Shampoo suave para cães e gatos, ideal para peles sensíveis.</p>
+              <p class="fw-bold text-flu-green">R$ 24,90</p>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="col-md-3 mb-3">
-        <div class="card h-100 border-flu">
-          <img src="assets/img/higiene/perfume.png" class="card-img-top"
-               alt="Perfume pet com fragrância suave">
-          <div class="card-body">
-            <h5 class="card-title text-flu-grena">Perfume Pet</h5>
-            <p class="card-text">Perfume com fragrância suave para deixar seu pet ainda mais cheiroso.</p>
-            <p class="fw-bold text-flu-green">R$ 19,90</p>
+        <div class="col-md-3 mb-3">
+          <div class="card h-100 border-flu">
+            <img src="assets/img/higiene/perfume.png" class="card-img-top"
+                 alt="Frasco de perfume para pets">
+            <div class="card-body">
+              <h3 class="h5 card-title text-flu-grena">Perfume Pet</h3>
+              <p class="card-text">Perfume com fragrância suave para deixar seu pet ainda mais cheiroso.</p>
+              <p class="fw-bold text-flu-green">R$ 19,90</p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
   </main>
 
