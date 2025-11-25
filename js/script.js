@@ -5,14 +5,14 @@ function atualizarMensagemHorario() {
 
   const agora = new Date();
   const hora = agora.getHours();
-  let saudacao = "Bem-vinda(o) à PetFlu!";
+  let saudacao = "Bem-vinda(o) ao PetFlu!";
 
   if (hora >= 5 && hora < 12) {
-    saudacao = "Bom dia! Que bom ter você aqui na PetFlu!";
+    saudacao = "Bom dia! Bem-vinda(o) ao PetFlu!";
   } else if (hora >= 12 && hora < 18) {
-    saudacao = "Boa tarde! Que bom ter você aqui na PetFlu!";
+    saudacao = "Boa tarde! Bem-vinda(o) ao PetFlu!";
   } else {
-    saudacao = "Boa noite! Que bom ter você aqui na PetFlu!";
+    saudacao = "Boa noite! Bem-vinda(o) ao PetFlu!";
   }
 
   elemento.textContent = saudacao;
@@ -42,6 +42,10 @@ function configurarFormularioAgendamento() {
   form.addEventListener("submit", function (event) {
     const nomeCliente = document.getElementById("nomeCliente").value.trim();
     const nomePet = document.getElementById("nomePet").value.trim();
+    const servico = form.servico.value;
+    const atendimento = form.atendimento.value;
+    const data = document.getElementById("dataAgendamento").value;
+    const hora = document.getElementById("horaAgendamento").value;
 
     if (!nomeCliente || !nomePet) {
       alert("Por favor, preencha pelo menos o nome do cliente e do pet.");
@@ -49,8 +53,17 @@ function configurarFormularioAgendamento() {
       return;
     }
 
-    alert("Cadastro e agendamento enviados com sucesso! 🐾");
-    // Se quiser impedir o envio real (só para teste), descomente:
+    // Resumo do agendamento (mostra uso de JS de forma clara)
+    alert(
+      "Cadastro e agendamento enviados com sucesso! 🐾\n\n" +
+      `Cliente: ${nomeCliente}\n` +
+      `Pet: ${nomePet}\n` +
+      `Serviço: ${servico}\n` +
+      `Atendimento: ${atendimento}\n` +
+      `Data: ${data} às ${hora}`
+    );
+
+    // Se quiser impedir o envio real (apenas teste), descomente:
     // event.preventDefault();
   });
 }
